@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask">
+<g id="image fill" clip-path="url(#clip0_188_3561)">
+<g id="image">
+<path id="Vector" d="M27.4995 15.0757C27.4995 8.13 21.9037 2.49975 15 2.49975C8.0955 2.49975 2.49975 8.13 2.49975 15.0757C2.49975 21.354 7.0695 26.5568 13.0463 27.4995V18.7117H9.873V15.075H13.0463V12.3045C13.0463 9.153 14.9122 7.4115 17.7682 7.4115C19.1347 7.4115 20.5665 7.6575 20.5665 7.6575V10.752H18.9892C17.4367 10.752 16.953 11.7225 16.953 12.717V15.0757H20.4195L19.8652 18.7103H16.953V27.4995C22.9297 26.5568 27.4995 21.354 27.4995 15.0757Z" fill="var(--fill-0, black)"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_188_3561">
+<rect width="30" height="30" fill="white"/>
+</clipPath>
+</defs>
+</svg>
