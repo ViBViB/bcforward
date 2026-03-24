@@ -133,6 +133,7 @@ body {
     font-size: 15px;
     height: 18px; /* Fixed height for rolling effect */
     overflow: hidden;
+    display: block; /* Required for overflow: hidden to work */
 }
 
 .c-nav-link__text-container {
