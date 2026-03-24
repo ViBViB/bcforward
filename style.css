@@ -662,7 +662,8 @@ body {
     border-radius: 20px;
     border: 1px solid #e5e9ed; /* Light gray border instead of shadow */
     margin-bottom: 40px; /* Gap between cards in the scroll flow */
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     overflow: hidden;
     height: 410px; /* Further reduced height to hit the target */
     transition: none;
@@ -685,15 +686,12 @@ body {
 }
 
 .c-promise__card-content {
-    flex: 1;
-    width: 50%;
-    max-width: 50%;
-    box-sizing: border-box !important;
     padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    box-sizing: border-box !important;
 }
 
 .c-promise__card-title {
@@ -729,12 +727,9 @@ body {
 }
 
 .c-promise__card-image-wrapper {
-    flex: 1;
-    width: 50%;
-    max-width: 50%;
-    box-sizing: border-box !important;
     height: 460px;
     overflow: hidden;
+    box-sizing: border-box !important;
 }
 
 .c-promise__card-image {
