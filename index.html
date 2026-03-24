@@ -414,7 +414,7 @@
     </div>
 </section>
 
-<section class="c-stats js-reveal">
+<section class="c-stats">
     <div class="c-stats__wrapper">
         <!-- Header Section -->
         <header class="c-stats__header">
@@ -429,7 +429,7 @@
         </header>
 
         <!-- Stats Grid -->
-        <div class="c-stats__grid">
+        <div class="c-stats__grid js-reveal" data-threshold="0.8">
             <!-- Card 1: 95% (Top Left) -->
             <div class="c-stats__card c-stats__card--95">
                 <div class="c-stats__card-number"><span class="js-counter" data-target="95">0</span><span>%</span></div>
@@ -791,11 +791,13 @@
         }, 30);
     };
 
-    const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.3 // Increased back to ensure trigger is visible
-    });
-
     document.querySelectorAll('.js-reveal').forEach(section => {
+        const customThreshold = parseFloat(section.getAttribute('data-threshold')) || 0.3;
+        
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: customThreshold
+        });
+        
         revealObserver.observe(section);
     });
 
