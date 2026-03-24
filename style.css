@@ -144,7 +144,7 @@ body {
 .c-nav-link__text {
     display: block;
     line-height: 18px;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .c-hero__nav-link:hover .c-nav-link__text {
@@ -171,20 +171,44 @@ body {
 }
 
 .c-button__text-container {
-    height: 17px;
+    height: 18px;
     overflow: hidden;
     position: relative;
-    width: 105px;
 }
 
 .c-button__text {
     display: block;
-    line-height: 16.8px;
-    transition: transform 0.3s ease;
+    line-height: 18px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.c-button--hifi:hover .c-button__text {
-    transform: translateY(-16.8px);
+.c-button--hifi:hover .c-button__text,
+.c-button--primary-dark:hover .c-button__text,
+.c-cta__button:hover .c-button__text,
+.c-footer__submit:hover .c-button__text {
+    transform: translateY(-100%);
+}
+
+/* Icon Rolling Effect (Horizontal) */
+.c-button__icon {
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+.c-button__icon-inner {
+    display: flex;
+    width: 36px;
+    transform: translateX(-18px); /* Start with the right-most icon */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.c-button--hifi:hover .c-button__icon-inner,
+.c-button--primary-dark:hover .c-button__icon-inner,
+.c-cta__button:hover .c-button__icon-inner,
+.c-footer__submit:hover .c-button__icon-inner {
+    transform: translateX(0); /* Move inner container to the right */
 }
 
 /* Hero Content */
@@ -329,7 +353,7 @@ body {
     gap: 12px;
     width: fit-content;
     height: fit-content;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.6s ease;
     flex-shrink: 0;
 }
 
@@ -341,7 +365,7 @@ body {
 }
 
 .c-button--primary-dark:hover {
-    background-color: #182740;
+    background-color: #1D527D;
 }
 
 /* Grid Layout */
@@ -651,14 +675,12 @@ body {
 
 /* When a card is stacked behind another (Fallback/Initial) */
 .c-promise__card.is-stacked-1 {
-    transform: translateY(-15px) scale(0.98);
-    width: 98%;
+    transform: translateY(-20px) scale(0.95);
     opacity: 1;
 }
 
 .c-promise__card.is-stacked-2 {
-    transform: translateY(-30px) scale(0.96);
-    width: 96%;
+    transform: translateY(-40px) scale(0.90);
     opacity: 1;
 }
 
@@ -1261,6 +1283,12 @@ body {
     text-decoration: none;
     align-self: flex-start;
     border: 1px solid #d9d9d9;
+    overflow: hidden;
+    transition: background-color 0.6s ease;
+}
+
+.c-cta__button:hover {
+    background-color: #f0f0f0;
 }
 
 .c-cta__man {
@@ -1382,6 +1410,12 @@ body {
     border: none;
     cursor: pointer;
     align-self: flex-start;
+    overflow: hidden;
+    transition: background-color 0.6s ease;
+}
+
+.c-footer__submit:hover {
+    background-color: #1D527D;
 }
 
 /* Divider */
